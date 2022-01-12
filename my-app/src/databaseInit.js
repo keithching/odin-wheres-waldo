@@ -37,7 +37,7 @@ const getInitialDatabaseData = () => {
             {
                 name: 'KOBAYASHI YUI',
                 id: 'ponpon',
-                avatar: 'http://stage48.net/wiki/images/5/5b/KobayashiYui8th.jpg',
+                avatar: 'https://sakurazaka46.com/files/14/diary/s46/blog/moblog/202010/mobwZYKO2.jpg',
                 hitbox: {},
                 status: false
             },
@@ -73,7 +73,7 @@ const getInitialDatabaseData = () => {
             {
                 name: '佐藤詩織',
                 id: 'shiori',
-                avatar: 'http://cdn.keyakizaka46.com/images/14/ea6/0f77ddfeedade54512313e3c64c16/400_320_102400.jpg',
+                avatar: 'https://qjweb.jp/wp-content/uploads/2021/10/DSC00578.jpg',
                 hitbox: {},
                 status: false
             },
@@ -154,7 +154,7 @@ const getInitialDatabaseData = () => {
 
     const photo6 = {
         title: 'ジャマイカビール',
-        url: 'http://toriizaka46.jp/wp-content/uploads/2021/12/dfsoihios.jpg',
+        url: 'https://livedoor.blogimg.jp/matomato455-keyaki46/imgs/d/6/d65315b4.jpg',
         difficulty: 1,
         characters: [
             {
@@ -174,7 +174,7 @@ const getInitialDatabaseData = () => {
             {
                 name: 'KOBAYASHI YUI',
                 id: 'ponpon',
-                avatar: 'http://stage48.net/wiki/images/5/5b/KobayashiYui8th.jpg',
+                avatar: 'https://sakurazaka46.com/files/14/diary/s46/blog/moblog/202010/mobwZYKO2.jpg',
                 hitbox: {},
                 status: false,
             }
