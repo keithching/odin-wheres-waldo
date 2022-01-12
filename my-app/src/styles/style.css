@@ -1,0 +1,769 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Staatliches', 'Zen Antique Soft', cursive;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.master-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255,255,255,0.7);
+}
+
+.main-container {
+    overflow: auto; /* adjust the width based on children's width */
+    display: flex;
+    min-height: 100vh;
+}
+
+.nav-container {
+    flex-shrink: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    gap: 20px;
+}
+
+.brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.font-one {
+    color: rgba(255,255,255,0.8);
+}
+
+.font-two {
+    color: rgba(0,0,0,0.7);
+}
+
+#brand-name {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.spacing {
+    border-style: solid;
+    border-width: 1px 0 0 0;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-links a.activePage {
+    font-weight: bold;
+    color: white;
+}
+
+.content-container {
+    flex: 1;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.game-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.timer-container {
+    flex: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.photo-container {
+    flex: auto;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.timer {
+    height: 50px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 80px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.1);
+    gap: 20px;
+    transition: all 0.2s;
+}
+
+.timer.gameEnded {
+    background-color: rgba(152, 235, 135, 0.5);
+}
+
+.timer button {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.fas.fa-play {
+    color: red;
+}
+
+.fas.fa-pause {
+    color: rgb(0, 157, 255);
+}
+
+.game-photo img {
+    height: auto;
+    cursor: pointer;
+}
+
+.game-photo img,
+#photo-mosaic {
+    border-radius: 20px;
+}
+
+#targeting-box {
+    color: white;
+    opacity: 0.6;
+    font-size: 30px;
+    transition: all 0.3s;
+    padding: 0;
+    margin: 0;
+}
+
+
+.development-only {
+    color: rgba(255,255,255,0.5);
+}
+
+
+#targeting-box, #dropdown {
+    transition: all 0.3s;
+}
+
+#dropdown ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 15px;
+    margin: 0;
+    gap: 5px;
+}
+
+#dropdown li {
+    width: 80px;
+    text-align: center;
+    padding: 2px 10px;
+    margin: -1px;
+    background-color: rgba(60,60,60);
+    color: white;
+    border-color: rgba(255,255,255,0.8);
+    border-style: solid;
+    border-width: 1px;
+    list-style: none;
+    cursor: pointer;
+}
+
+#dropdown li:hover {
+    background-color: rgba(135, 207, 235, 1);
+}
+
+.utilities {
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 200px;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.avatar {
+    display: flex;
+    gap: 10px;
+}
+
+.avatar-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* https://stackoverflow.com/questions/26681059/create-a-circle-avatar-from-a-rectangle-image-keeping-proportions-and-just-using */
+
+    /* styling the icon */
+    background-size: cover;
+    transition: all 0.3s;
+}
+
+.avatar-icon.transition {
+    transform: scale(1.1);
+}
+
+.progress-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 50px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.1);
+    gap: 20px;
+}
+
+.progress-bar {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.progress-bar .bar {
+    width: 100px;
+    height: 20px;
+    border-style: solid;
+    border-radius: 5px;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.portion {
+    background-color: white;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255,0.2);
+    color: white;
+    padding: 50px;
+    font-size: 20px;
+    box-shadow: 0 0 5px 1px rgba(255,255,255,0.4);
+}
+
+
+.footer a {
+    text-decoration: none;
+    color: grey;
+}
+
+
+#canvas-container {
+    background-color: white;
+}
+
+
+.currentMode {
+    background-color: skyblue;
+    transform: scale(1.1);
+}
+
+.storedRects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.storedRect {
+    padding: 10px;
+    background-color: rgba(255,255,255,0.2);
+}
+
+.getHit {
+    background-color: rgba(0,0,255,0.5);
+}
+
+.setup-container {
+    display: flex;
+    padding: 20px;
+}
+
+.setup-container .setup-container-content {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.setup-container .setup-container-control-panel {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.setup-container .setup-container-control-panel button {
+    width: 100px;
+    padding: 10px 15px;
+    background-color: white;
+    border-style: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.setup-container .setup-container-control-panel button.activeMode {
+    background-color: pink;
+}
+
+.setup-container .setup-container-control-panel button:hover {
+    background-color: skyblue;
+}
+
+#canvas-setup-mode {
+    background-color: white;
+}
+
+.characters-setup-mode {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.character-setup-mode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.1);
+    cursor: pointer;
+}
+
+.characterToEdit {
+    background-color: skyblue;
+}
+
+.rect-setup-mode {
+    background-color: rgba(255,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rect-setup-mode.displayRectsFromDB {
+    background-color: rgba(135, 207, 235, 0.5);
+}
+
+.setup-mode-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.setup-mode-content-buttons {
+    display: flex; 
+    gap: 10px;
+}
+
+.setup-mode-content-buttons button {
+    padding: 10px 15px;
+    border-style: none;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.setup-mode-content-buttons button:hover {
+    background-color: skyblue;
+}
+
+#photo-setup-mode {
+    cursor: pointer;
+}
+
+#rect {
+    background-color: rgba(0,0,255,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.test-mode-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#alertMsg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 10px 20px;
+    margin: 20px;
+    background-color: rgba(23, 127, 238, 0.8);
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+#alertMsg.show {
+    opacity: 1;
+}
+
+#popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#userForm {
+    z-index: 1000; /* https://stackoverflow.com/questions/7421775/css-i-want-a-div-to-be-on-top-of-everything */
+    border-radius: 10px;
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.2);
+    background-color: rgba(255,255,255,1);
+    width: 500px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    gap: 20px;
+}
+
+.userForm-title {
+    font-size: 40px;
+}
+
+.userForm-row {
+    display: flex;
+    gap: 10px;
+}
+
+.userForm-row,
+.userForm-msg {
+    font-size: 20px;
+}
+
+#userForm-input {
+    border-width: 0 0 2px 0;
+    transition: all 0.2s;
+    font-size: 20px;
+    width: 150px;
+}
+
+#userForm-input:focus {
+    outline: none;
+    border-color: blue;
+}
+
+
+#userForm-input + span.error {
+    color: red;
+}
+
+#userForm-input.invalid {
+    border-color: red;
+}
+
+
+#userForm button {
+    box-shadow: 0 0 0 5px 1px rgba(0,0,0,0.1);
+    border-style: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.ranking-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 20px 0;
+}
+
+.ranking-nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    background-color: rgba(255,255,255,0.1);
+    padding: 20px 50px;
+    font-size: 40px;
+}
+
+.ranking-nav-item {
+    padding: 5px 10px;
+}
+
+.ranking-nav-item.current {
+    color: skyblue;
+}
+
+.ranking-table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    gap: 10px;
+    padding: 50px;
+}
+
+.ranking-row,
+.ranking-row-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.ranking-playerName-title,
+.ranking-clearTime-title,
+.ranking-playerName,
+.ranking-clearTime {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+
+.ranking-playerName-title,
+.ranking-clearTime-title {
+    font-size: 40px;
+}
+
+.ranking-playerName,
+.ranking-clearTime {
+    font-size: 30px;
+    color: rgba(255,255,255,0.7);
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-container-content {
+    font-size: 30px;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.credit {
+    flex-shrink: 0;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.credit a {
+    text-decoration: none;
+    color: grey;
+}
+
+.home-card-container {
+    display: flex;
+    gap: 50px;
+    width: 1600px;
+    /* 3 cards (500*3 + 50*2) */
+    overflow: hidden;
+}
+
+#slider-backward,
+#slider-forward {
+    z-index: 1000;
+    padding: 10px;
+    width: 80px;
+    height: 80px;
+    background-color: rgb(0,0,0);
+    border-style: none;
+    color: rgb(255,255,255,0.7);
+    font-size: 25px;
+    transition: all 0.3s;
+}
+
+#slider-backward:hover,
+#slider-forward:hover {
+    color: white;
+}
+
+#slider-backward {
+    position: relative;
+    left: 40px;
+    top: 300px;
+}
+
+#slider-forward {
+    position: relative;
+    right: 40px;
+    top: 300px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 500px;  
+    transition: all 0.3s;
+}
+
+
+.card-upper-portion {
+    border-style: solid;
+    border-width: 10px;
+    border-color: white;
+    padding: 40px;
+    transition: all 0.3s;
+}
+
+.card-upper-portion:hover {
+    border-color: rgba(0,0,0,0.7);
+}
+
+.card-upper-portion .photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.card-upper-portion .photo img {
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+    width: 400px;
+}
+
+#enterGameIcon {
+    z-index: 1000;
+    font-size: 50px;
+    color: rgba(255,255,255,0.6);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+#enterGameIcon.effect-start {
+    color: rgba(255,255,255,0.3);
+}
+
+#enterGameIcon.effect-start.effect-end {
+    color: rgba(255,255,255,0.8);
+}
+
+.card-lower-portion {
+    background-color: rgba(255,255,255,1);
+    border-radius: 0 0 20px 20px;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.always-show {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+
+}
+
+.card-lower-portion .title {
+    color: black;
+    font-size: 30px;
+}
+
+.card-lower-portion .difficulty {
+    color: black;
+}
+
+.fas.fa-star,
+.far.fa-star {
+    color: grey;
+}
+
+
+.hover-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    height: 200px;
+    border-style: solid;
+    border-color: rgba(0,0,0,0.1);
+    border-width: 1px 0 0 0;
+}
+
+.hover-row .avatar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.hover-row .avatar-icon {
+    background-color: rgba(0,0,0,0.1);
+    height: 80px;
+    width: 80px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.topRank-row {
+    color: black;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+.topRank-row .topRank-playerName,
+.topRank-row .topRank-clearTime {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 30px;
+    overflow: hidden;
+}
+
+.topRank-row .topRank-playerName {
+    width: 50px;
+}
+
+.setup-photo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.setup-photo-list-item {
+    padding: 5px 10px;
+    background-color: rgba(255,255,255,0.2);
+}
+
