@@ -44,14 +44,14 @@ const getInitialDatabaseData = () => {
             {
                 name: 'WATANABE RISA',
                 id: 'risa',
-                avatar: 'https://www.j-enta.com/fotos/13134.jpg',
+                avatar: 'https://realsound.jp/wp-content/uploads/2020/09/20200905-watanaberisa.jpg.webp',
                 hitbox: {},
                 status: false
             },
             {
                 name: 'KOIKE MINAMI',
                 id: 'koike',
-                avatar: 'http://stage48.net/wiki/images/e/e8/KoikeMinami8th.jpg',
+                avatar: 'https://sakurazaka46.com/images/14/001/355905caa394c7c770008bb2b49a7.jpg',
                 hitbox: {},
                 status: false
             }
