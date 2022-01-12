@@ -42,14 +42,14 @@ const Nav = () => {
 
                         {/* for developer only */}
 
-                        <NavLink
+                        {/* <NavLink
                             to="/setupdatabase"
                             className={({ isActive }) => 
                             isActive ? activeClassName : undefined
                             }
                         >
                             Setup Database
-                        </NavLink>
+                        </NavLink> */}
 
                         {/* for developer only */}
 
